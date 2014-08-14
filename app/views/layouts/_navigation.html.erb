@@ -1,12 +1,20 @@
 <%# navigation styled for Zurb Foundation 5 %>
 <nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name"><%= link_to 'Home', root_path %></li>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-  </ul>
   <div class="top-bar-section">
     <ul>
-      <%= render 'layouts/navigation_links' %>
+      <%# add navigation links to this file %>
+    	<li><%= link_to 'Home', root_path %></li>
+			<li><%= link_to 'Work', page_path('work') %></li>
+			<li><%= link_to 'Contact', page_path('contact') %></li>
+			<li><%= link_to 'Members', page_path('members') %></li>
+			<li><%= link_to 'Blog', posts_path %></li>
+
+			<% if user_signed_in? %>
+			  <li><%= link_to 'Sign out', signout_path %></li>
+			<% else %>
+			  <li><%= link_to 'Sign in', signin_path %></li>
+			<% end %>
+
     </ul>
   </div>
 </nav>
