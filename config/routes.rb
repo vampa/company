@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   
-  resources :posts
+	## ADMIN SUBDOMAIN
+	get '/' => 'admin#dash', :constraints => {:subdomain => "admin"}
+
+	get '/' => 'visitors#index', :constraints => {:subdomain => /.+/}, :as => :root
+
+	resources :posts
   resources :users, :only => [:index, :show]
-  
-  root to: 'visitors#index'
 
   get '/auth/:provider/callback' => 'sessions#create'
   get '/signin' => 'sessions#new', :as => :signin
