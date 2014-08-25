@@ -1,0 +1,140 @@
+// FONTS
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700)
+
+@font-face
+	font-family: HeaderFont
+	src: url('webfonts/Franchise-Bold.ttf') format('truetype')
+
+// ICON FONT FOR BUTTONS
+
+@font-face
+	font-family: ICONS
+	src: url('webfonts/fontello.eot'), url('webfonts/fontello.ttf') format('truetype'), url('webfonts/fontello.woff') format('woff'), url('webfonts/fontello.eot?#iefix') format('embedded-opentype')
+
+// CONTENT RESET STYLES
+
+li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td
+	list-style: none outside none
+	text-decoration: none
+	font-family: "Droid Serif", Georgia, serif
+	font-weight: 300
+	font-size: 1em
+	line-height: 1.5em
+	letter-spacing: .03em
+
+.condensed
+	font-family: "HeaderFont", "Helvetica Neue", "Arial", sans-serif
+
+.light
+	font-weight: 300
+
+.normal
+	font-weight: 400
+
+.bold
+	font-weight: 600
+
+.extrabold
+	font-weight: 800
+
+.icon
+	font-family: "ICONS"
+	color: black
+
+.mega-headline
+	font-size: 4em
+	margin: .35em 0
+	&.page-title
+		width: 80%
+
+#notice
+	font-weight: 400
+	font-size: .85em
+	color: #42555e
+
+.page-title
+	font-size: 3em
+	margin: .80em 0 .30em 0
+
+.section-title
+	font-weight: semibold
+	text-transform: uppercase
+	font-size: 1.2em
+	margin: 1em 0 0 0
+	span.bold
+		font-weight: 800
+		width: auto
+		padding-right: 5px
+
+// HEADERS
+
+h1, h2, h3, h4, h5, h6
+	letter-spacing: 0
+	padding-bottom: 15px
+	width: 100%
+
+h1
+	font-family: "HeaderFont"
+	font-weight: 800
+	text-transform: uppercase
+	font-size: 35pt
+
+h2
+	font-weight: 600
+	font-size: 28pt
+
+h3
+	font-weight: 400
+	font-size: 23pt
+
+h4
+	font-weight: 300
+	font-size: 18pt
+
+h5
+	font-weight: 400
+	font-size: 14pt
+
+// PAGE ELEMENTS
+
+a
+	font-weight: 300
+	text-decoration: none
+
+// SIDEBAR
+
+#sidebar
+	#school-card h1
+		font-size: 2em
+	.label
+		text-transform: uppercase
+		font-size: 1em
+		font-weight: 600
+		padding: 5% 2.5%
+		color: #E1E1E1
+		&.progress-bar
+			border-bottom: 0
+	a
+		font-weight: 400
+		font-size: .9em
+		+text-shadow(1px 1px black)
+		&.current
+			+text-shadow(none)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

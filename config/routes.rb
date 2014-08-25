@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   
 	## ADMIN SUBDOMAIN
-	get '/' => 'admin#dash', :constraints => {:subdomain => "admin"}
+	get '/' => 'admin#dash', :constraints => {:subdomain => "admin"}, :as => :admin
   get '/' => 'visitors#index', :constraints => {:subdomain => false}
   get '/' => 'visitors#index', :constraints => {:subdomain => /.+/}, :as => :root
-
 
 	resources :posts
   resources :users, :only => [:index, :show]

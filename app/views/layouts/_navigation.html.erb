@@ -5,15 +5,9 @@
       <%# add navigation links to this file %>
     	<li><%= link_to 'Home', root_path %></li>
 			<li><%= link_to 'Work', page_path('work') %></li>
+			<li><%= link_to 'About', page_path('about') %></li>
 			<li><%= link_to 'Contact', page_path('contact') %></li>
 			<li><%= link_to 'Blog', posts_path %></li>
-
-			<% if user_signed_in? %>
-			  <li><%= link_to 'Sign out', signout_path %></li>
-			<% else %>
-			  <li><%= link_to 'Sign in', signin_path %></li>
-			<% end %>
-
     </ul>
   </div>
 </nav>

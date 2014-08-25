@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
   <%= render 'layouts/head' %>
-  <body>
+  <body id="admin">
+  	<div id="header">
+  		<div id="logo">
+  			<a href="<%= admin_path %>"></a>
+  		</div>
+  		<h1>VAMPA</h1>
+  		<ul class="right">
+  			<li><a href="">PROJECTS</a></li>
+  			<li><a href="">MESSAGES</a></li>
+  			<li><a href="">BLOG</a></li>
+  			<li class="icon-li">
+  				<a href="<%= signout_path %>"><span class="icon-logout"></span></a>
+  			</li>
+  		</ul>
+  	</div>
     <main role="main">
        <%= render 'layouts/messages' %>
        <%= yield %>

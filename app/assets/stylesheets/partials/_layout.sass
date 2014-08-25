@@ -1,0 +1,80 @@
+// LAYOUT RESET STYLES
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, a, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video
+	padding: 0
+	margin: 0
+	border: 0
+	outline: 0
+	vertical-align: baseline
+	list-style: none outside none
+	float: left
+
+*, *:before, *:after
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+// PAGE ELEMENTS & COMMON CLASSES
+
+html
+	width: 100%
+	background: white
+	position: relative
+	min-height: 100%
+	&.plain
+		background: white
+
+body
+	position: relative
+	padding-bottom: 10%
+	width: 100%
+	height: 100%
+
+.right
+	float: right
+
+p
+	padding-bottom: 25px
+	clear: left
+
+// HEADER
+
+#header
+	width: 100%
+	background: url(image_path('slice.png')) repeat-x
+	min-height: 100px
+	#logo
+		display: block
+		width: 145px
+		height: 176px
+		background: url(image_path('logo_bg.png')) no-repeat
+		text-align: center
+		a
+			display: block
+			height: 59px
+			width: 43px
+			margin-top: 70px
+			margin: 70px 51px 0 51px
+			background: url(image_path('logo.png')) no-repeat
+			&:hover
+				background-position-y: -60px
+	h1
+		width: auto
+		clear: none
+		color: #454545
+		margin-top: 5px
+	ul.right
+		li
+			height: 69px
+			border-left: 1px solid #e7e7e9
+			a
+				font-weight: bold
+				color: #454545
+				padding: 22px
+				&:hover
+					color: #242424
+					background: #f7f7f9
+				span
+					width: auto
+					font-size: 1.2em
+

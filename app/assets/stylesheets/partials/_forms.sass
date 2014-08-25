@@ -1,0 +1,131 @@
+// FORMS 
+
+h3.form-label
+	text-transform: uppercase
+	font-size: 1.2em
+	font-weight: 700
+	margin-top: 15px
+	color: #454545
+
+// LAYOUT & STRUCTURE
+
+.form-item
+	float: left
+	clear: left
+	margin: 10px 0
+	position: relative
+	&.half-width
+		width: 150px
+		float: left
+		clear: none
+		margin-right: 10px
+		label
+			width: 150px
+		input
+			width: 130px
+	input, textarea
+		padding: 5px 10px
+		border: 1px solid #ccc
+		max-width: 100%
+		box-sizing: border-box
+	label, p.label
+		text-transform: uppercase
+		font-size: .7em
+		font-weight: 600
+		padding-bottom: .4em
+		color: #454545
+	p.label
+		padding-bottom: 0
+		span
+			font-weight: 300
+			width: auto
+	.error
+		float: left
+		clear: none
+		text-transform: uppercase
+		font-size: .7em
+		font-weight: 600
+		padding-bottom: .4em
+		color: #ca1e1e
+	.full-spectrum
+		max-width: 45px
+		.sp-preview
+			float: left
+			width: 25px
+		.sp-dd
+			float: left
+			clear: none
+			width: 10px
+.sp-container
+	width: auto
+	float: left
+	div
+		width: auto
+	.sp-picker-container
+		display: none
+.hint
+	padding: 5px 0 0 0
+	font-size: .9em
+	color: #454545
+	font-style: italic
+	font-weight: regular
+
+// INPUT FIELDS
+
+input, textarea
+	+roundedCorners
+
+select
+	margin-top: 10px
+	float: left
+
+// BUTTONS
+
+input[type="file"]
+	padding: 0
+	border: 0
+input[type="submit"], a.submit, a.secondary
+	+roundedCorners
+	float: left
+	width: auto
+	font-size: 1em
+	padding: .5em 1em
+	background: #77848C
+	border: 1px solid #647782
+	text-transform: uppercase
+	font-weight: 600
+	color: #F2F2F2
+	&:hover
+		background: #647782
+		color: #FFFFFF
+		cursor: pointer
+	&.small-button
+		padding: .2em .5em
+		font-size: .8em
+a.submit
+	margin-top: 15px
+a.secondary, .secondary input[type="submit"]
+	background: #d7dfe5
+	border-color: #aeb7be
+	color: #8c9ca8
+	margin-right: 10px
+	&:hover
+		background: #d7dfe5
+		border-color: #aeb7be
+		color: #8c9ca8
+		
+
+// CALL TO ACTION (CTA) LINKS
+
+a.cta-link
+	+roundedCorners
+	color: #86A2B3
+	width: auto
+	font-size: .85em
+	padding: .5em 1em
+	background: #FFFFFF
+	border: 1px solid #86A2B3
+	text-transform: uppercase
+	&:hover
+		background: #86A2B3
+		color: #FFFFFF
