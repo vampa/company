@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to Rails.application.secrets.root_public_url, :notice => 'Signed out!'
+    redirect_to root_public_url, :notice => 'Signed out!'
   end
 
   def failure
