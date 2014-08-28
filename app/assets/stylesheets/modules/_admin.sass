@@ -35,6 +35,63 @@ body#admin
 					&:hover
 						color: #242424
 						background: #f7f7f9
+					&.active
+						color: darken($highlight-color, 13%)
+						background: lighten($highlight-color, 53%)
 					span
 						width: auto
 						font-size: 1.2em
+
+// PROJECTS
+
+#projects-wrap
+	width: 100%
+	height: calc(100% - 180px)
+	background: white
+	border: 1px solid darken(#f7f7f9, 10%)
+	+roundedCorners(4px)
+	#project-select
+		+roundedCorners(4px 0 0 4px)
+		width: 25%
+		height: 100%
+		background: #f7f7f9
+		border-right: 1px solid darken(#f7f7f9, 10%)
+		li
+			background: #f7f7f9
+			width: 100%
+			height: 75px
+			clear: left
+			border-bottom: 1px solid darken(#f7f7f9, 10%)
+			a
+				font-family: "HeaderFont", "Helvetica Neue", "Arial", sans-serif
+				font-size: 20pt
+				color: #454545
+				height: 100%
+				width: 100%
+				padding: 8% 5%
+				background-image: linear-gradient(white, #f7f7f9 30%, darken(#f7f7f9, 1%) 70%, darken(#f7f7f9, 2%))
+				&:hover
+					background: darken(#f7f7f9, 5%)
+	#project-profile
+		width: 75%
+		padding: 2%
+		#project-right
+			width: 300px
+			float: right
+			img
+				margin-bottom: 5%
+			h2
+				border-bottom: 1px solid darken(#f7f7f9, 10%)
+				padding-bottom: 0
+		#project-left
+			width: calc(96% - 300px)
+			clear: none
+			h1#project-name
+				border-bottom: 1px solid darken(#f7f7f9, 10%)
+				padding-bottom: 0
+			h2#project-tagline
+				padding-top: 2%
+			h3.project-header
+				padding-bottom: 0
+				border-bottom: 1px solid darken(#f7f7f9, 5%)
+				margin-bottom: 2%

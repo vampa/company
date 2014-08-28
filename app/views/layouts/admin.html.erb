@@ -4,21 +4,23 @@
   <body id="admin">
   	<div id="header">
   		<div id="logo">
-  			<a href="<%= root_admin_url %>"></a>
+  			<a href="<%= root_admin_url %>" <% if @current == "dash"%>class="active"<% end %>></a>
   		</div>
   		<h1>VAMPA</h1>
   		<ul class="right">
-  			<li><a href="">PROJECTS</a></li>
-  			<li><a href="">MESSAGES</a></li>
-  			<li><a href="">BLOG</a></li>
+  			<li><a href="<%= projects_path %>" <% if @current == "projects"%>class="active"<% end %>>PROJECTS</a></li>
+  			<li><a href="<%= messages_path %>" <% if @current == "messages"%>class="active"<% end %>>MESSAGES</a></li>
+  			<li><a href="<%= blog_path %>" <% if @current == "blog"%>class="active"<% end %>>BLOG</a></li>
   			<li class="icon-li">
   				<a href="<%= signout_path %>"><span class="icon-logout"></span></a>
   			</li>
   		</ul>
   	</div>
     <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
+      <%= render 'layouts/messages' %>
+      <div id="content-wrap">
+        <%= yield %>
+      </div>
     </main>
   </body>
 </html>

@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure'
 
+  get '/admin/projects' => 'admin#projects', :as => :projects
+  get '/admin/messages' => 'admin#messages', :as => :messages
+  get '/admin/blog' => 'admin#blog', :as => :blog
+
   match '/*id' => 'high_voltage/pages#show', :as => :page, :via => :get
 
 end

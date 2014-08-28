@@ -25,10 +25,11 @@ html
 		background: white
 
 body
-	position: relative
-	padding-bottom: 10%
 	width: 100%
 	height: 100%
+	position: absolute
+	top: 0
+	left: 0
 
 .right
 	float: right
@@ -38,6 +39,40 @@ p
 	clear: left
 
 // HEADER
+
+.alert-box
+	float: right
+	width: calc(98% - 150px)
+	margin-top: -90px
+	margin-right: 2%
+	padding: 10px 15px
+	background: $highlight-color
+	+roundedCorners()
+	border: 1px solid darken($highlight-color, 10%)
+	div
+		width: 98%
+		padding-top: 3px
+		font-size: 1.3em
+		color: white
+	a.close
+		float: right
+		color: white
+		font-size: 20px
+	&.alert
+		background: #c63235
+		border: 1px solid darken(#c63235, 10%)
+
+main
+	height: 100%
+	display: block
+	float: left
+	width: 100%
+	#content-wrap
+		float: left
+		width: 100%
+		padding: 1% 2.5%
+		margin-top: -1%
+		height: 100%
 
 body#public
 	#header
