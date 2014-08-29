@@ -21,6 +21,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 
 gem "figaro"
+gem 'newrelic_rpm'
 
 group :production do
 	gem 'rails_12factor'
