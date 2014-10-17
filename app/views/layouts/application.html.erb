@@ -2,14 +2,18 @@
 <html>
   <%= render 'layouts/head' %>
   <body id="public">
-    <div id="header">
-      <div id="logo">
-        <a href="<%= root_public_url %>"></a>
-      </div>
-    </div>
+    <% if current_page?(root_url) %>
+      <a id="logo">
+    <% else %>
+      <a href="<%= root_public_url %>" id="logo">
+    <% end %>
+      <img src="<%= asset_path('flat_logo.png') %>"/>
+      <h4>VAMPA</h4>
+    </a>
+
     <main role="main">
        <%= yield %>
     </main>
-    <a href="https://plus.google.com/115107910402615091418" rel="publisher">Google+</a>
+
   </body>
 </html>

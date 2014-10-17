@@ -38,6 +38,8 @@ p
 	padding-bottom: 25px
 	clear: left
 
+
+
 // HEADER
 
 .alert-box
@@ -62,39 +64,74 @@ p
 		background: #c63235
 		border: 1px solid darken(#c63235, 10%)
 
-main
-	height: 100%
+#logo
 	display: block
+	background: #141414
+	position: absolute
+	width: 163px
+	height: 60px
+	color: #f7f7f9
+	padding: 10px 25px 10px 10px
+	top: 40px
+	z-index: 100
+	&:hover
+		color: white
+		background-color: black
+	img
+		float: left
+		height: 40px
+	h4
+		clear: none
+		float: left
+		width: auto
+		padding: 2px 0 0 20px
+		font-weight: 700
+
+// HOME 
+
+.home-one
 	float: left
 	width: 100%
-	#content-wrap
-		float: left
+	position: relative
+	video, #video
 		width: 100%
-		padding: 1% 2.5%
-		margin-top: -1%
-		height: 100%
-
-body#public
-	#header
-		width: 100%
-		text-align: center
-		#logo
-			display: block
-			width: 145px
-			height: 176px
-			background: url(asset_path('logo_bg.png')) no-repeat
-			float: none
-			margin: 0 auto
+		height: auto
+		size: 100%
+	ul.nav
+		position: absolute
+		right: 50px
+		top: 50px
+		li
+			padding-left: 50px
 			a
-				display: block
-				height: 59px
-				width: 43px
-				margin-top: 70px
-				margin: 70px 51px 0 51px
-				background: url(asset_path('logo.png')) no-repeat
+				color: white
+				font-size: 17pt
 				&:hover
-					background-position-y: -60px
+					color: $highlight-color
+	h2.slogan
+		color: white
+		position: absolute
+		right: 50px
+		bottom: 0
+		width: auto
+		text-align: center
+		font-weight: 700
+		font-size: 50pt
 
-nav
-	li
-		margin: 0 20px
+.home-two
+	float: left
+	clear: left
+	min-height: 200px
+	width: 100%
+	padding: 50px
+
+.home-three
+	padding: 50px
+	clear: left
+	min-height: 200px
+	width: 100%
+
+
+
+
+
