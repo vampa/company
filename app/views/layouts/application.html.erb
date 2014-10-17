@@ -2,14 +2,17 @@
 <html>
   <%= render 'layouts/head' %>
   <body id="public">
-    <% if current_page?(root_url) %>
-      <a id="logo">
-    <% else %>
-      <a href="<%= root_public_url %>" id="logo">
-    <% end %>
-      <img src="<%= asset_path('flat_logo.png') %>"/>
-      <h4>VAMPA</h4>
-    </a>
+    <div id="logo-wrap">
+      <% if current_page?(root_url) %>
+        <a id="logo">
+      <% else %>
+        <a href="<%= root_public_url %>" id="logo">
+      <% end %>
+        <img src="<%= asset_path('flat_logo.png') %>"/>
+        <h4>VAMPA</h4>
+      </a>
+      <h4 class="slogan">Think Sideways</h4>
+    </div>
 
     <main role="main">
        <%= yield %>

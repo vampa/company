@@ -28,6 +28,12 @@ body
 	width: 100%
 	height: 100%
 	position: absolute
+	overflow: hidden
+	background: url(asset_path('big.png')) no-repeat center center fixed
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
 	top: 0
 	left: 0
 
@@ -38,54 +44,47 @@ p
 	padding-bottom: 25px
 	clear: left
 
-
-
 // HEADER
 
-.alert-box
-	float: right
-	width: calc(98% - 150px)
-	margin-top: -90px
-	margin-right: 2%
-	padding: 10px 15px
-	background: $highlight-color
-	+roundedCorners()
-	border: 1px solid darken($highlight-color, 10%)
-	div
-		width: 98%
-		padding-top: 3px
-		font-size: 1.3em
-		color: white
-	a.close
-		float: right
-		color: white
-		font-size: 20px
-	&.alert
-		background: #c63235
-		border: 1px solid darken(#c63235, 10%)
-
-#logo
+#logo-wrap
 	display: block
-	background: #141414
 	position: absolute
-	width: 163px
-	height: 60px
-	color: #f7f7f9
-	padding: 10px 25px 10px 10px
 	top: 40px
 	z-index: 100
 	&:hover
-		color: white
-		background-color: black
-	img
+		#logo, h4.slogan
+			background-color: black
+	#logo
 		float: left
-		height: 40px
-	h4
+		background: #141414
+		width: 163px
+		height: 60px
+		color: #f7f7f9
+		padding: 10px 25px 10px 10px
+		&:hover
+			color: white
+		img
+			float: left
+			height: 40px
+		h4
+			clear: none
+			float: left
+			width: auto
+			padding: 2px 0 0 20px
+			font-weight: 700
+	h4.slogan
+		margin-left: 10px
+		float: left
 		clear: none
-		float: left
+		background: #141414
 		width: auto
-		padding: 2px 0 0 20px
-		font-weight: 700
+		height: 60px
+		color: #f7f7f9
+		padding: 12px 25px
+		font-weight: 200
+		&:hover
+			color: $highlight-color
+
 
 // HOME 
 
@@ -94,9 +93,12 @@ p
 	width: 100%
 	position: relative
 	video, #video
-		width: 100%
-		height: auto
+		min-width: calc(100% + 10px)
+		min-height: calc(100% + 100px)
 		size: 100%
+		position: fixed
+		top: -100px
+		right: -10px
 	ul.nav
 		position: absolute
 		right: 50px
@@ -117,6 +119,10 @@ p
 		text-align: center
 		font-weight: 700
 		font-size: 50pt
+
+@media only screen and (max-width : 500px)
+	.home-one video
+		display: none
 
 .home-two
 	float: left
