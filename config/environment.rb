@@ -9,7 +9,7 @@ ActionMailer::Base.smtp_settings = {
   port:                 	587,
   domain:               	'vampa.org',
   user_name:            	'smtp@vampa.org',
-  password:             	ENV["SMTP_PASS"],
+  password:             	'pE4U9RXxEg',
   authentication:       	'plain',
   enable_starttls_auto: 	true
 }
