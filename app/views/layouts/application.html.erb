@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <%= render 'layouts/head' %>
-  <body id="public">
+  <body id="public" class="cb03">
     <div id="logo-wrap">
       <% if current_page?(root_url) %>
         <a id="logo">
@@ -14,9 +14,6 @@
       <h4 class="slogan">Think Sideways</h4>
     </div>
 
-    <main role="main">
-       <%= yield %>
-    </main>
-
+    <%= yield %>
   </body>
 </html>

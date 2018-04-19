@@ -1,17 +1,19 @@
 <head>
+  <title><%= content_for?(:title) ? yield(:title) : "VAMPA" %></title>
 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="A6cuxRbJz-FQqQbAR_BZ6dIw123xV6EGZa8O9qKyYsk" />
-  <title><%= content_for?(:title) ? yield(:title) : "VAMPA" %></title>
-  <link rel="icon" type="image/png" href="<%= asset_path('favicon.png') %>">
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "VAMPA" %>">
 
+  <link rel="icon" type="image/png" href="<%= asset_path('favicon.png') %>">
+
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
   <%# Modernizr is required for Zurb Foundation %>
-  <%= javascript_include_tag 'vendor/modernizr' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
